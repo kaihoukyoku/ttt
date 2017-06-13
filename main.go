@@ -122,9 +122,9 @@ func processInput() {
 
 func checkWin() { //TODO: fix this shit holy fuck
 	isFull := true
-	for i := range board {
-		for j := range board[i] {
-			if board[i][j] == Empty {
+	for _, v := range board {
+		for _, w := range v {
+			if w == Empty {
 				isFull = false
 			}
 		}
