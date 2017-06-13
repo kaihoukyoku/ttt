@@ -12,9 +12,9 @@ import (
 )
 
 const (
-	width = 800
+	width  = 800
 	height = 600
-	title = "TTT"
+	title  = "TTT"
 )
 
 const (
@@ -25,12 +25,12 @@ const (
 )
 
 var (
-	board [3][3]int
-	turn int
+	board    [3][3]int
+	turn     int
 	row, col int
-	mx, my int32
-	turnip string //TODO: get rid of this
-	winner int
+	mx, my   int32
+	turnip   string //TODO: get rid of this
+	winner   int
 )
 
 func initialize() {
@@ -97,10 +97,10 @@ func mouseToBoard() {
 }
 
 func processInput() {
-	if winner == Empty {	
+	if winner == Empty {
 		if rl.IsMouseButtonPressed(rl.MouseLeftButton) {
 			if board[row][col] == Empty {
-				board[row][col] = turn			
+				board[row][col] = turn
 				if turn == O {
 					turn = X
 				} else {
@@ -134,7 +134,7 @@ func checkWin() { //TODO: fix this shit holy fuck
 		return
 	}
 	for i := 0; i < 3; i++ {
-		if board[i][0] != Empty && board[i][0] == board [i][1] && board[i][1] == board[i][2] {
+		if board[i][0] != Empty && board[i][0] == board[i][1] && board[i][1] == board[i][2] {
 			winner = board[i][0]
 			return
 		}
