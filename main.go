@@ -180,8 +180,7 @@ func drawHUD() {
 		doTurnip(winner)
 		rl.DrawText(fmt.Sprintf("WINNER: %v", turnip), 10, 10, 20, rl.Maroon)
 	} else {
-	rl.DrawText(fmt.Sprintf("TURN: %v", turnip), 10, 10, 20, rl.Maroon)
-
+		rl.DrawText(fmt.Sprintf("TURN: %v", turnip), 10, 10, 20, rl.Maroon)
 	}
 }
 
